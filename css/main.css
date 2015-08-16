@@ -6731,7 +6731,7 @@ body {
   }
   .jumbotron-header > .fixed {
     padding-top: 1px;
-    min-height: 500px;
+    min-height: 200px;
   }
   .jumbotron-header > .fixed.no-header {
     margin-top: -286px;
