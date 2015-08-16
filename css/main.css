@@ -6711,6 +6711,7 @@ body {
 @media (min-width: 1199px) {
   .jumbotron-header {
     border-top: 400px solid #444444;
+    min-height: 500px;
   }
   .jumbotron-header > .fixed {
     margin-top: -350px;
