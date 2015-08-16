@@ -6714,7 +6714,7 @@ body {
 }
 .jumbotron-header > h1 > .nav-icon {
   float: left;
-  color: #fff;
+  color: #222222;
   margin: 1px 10px 0 0;
 }
 .jumbotron-header > h1 > .nav-icon > .material-icons {
@@ -6722,7 +6722,7 @@ body {
   padding: 2px;
 }
 .jumbotron-header > h1 > .nav-icon :hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
 @media (min-width: 1199px) {
@@ -6741,6 +6741,12 @@ body {
     color: #fff;
     width: 1199px;
     max-width: 100%;
+  }
+  .jumbotron-header > h1 > .nav-icon {
+    color: #fff;
+  }
+  .jumbotron-header > h1 > .nav-icon :hover {
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 @media (min-width: 1199px) {

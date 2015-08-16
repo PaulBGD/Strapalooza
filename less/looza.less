@@ -30,7 +30,7 @@ body {
 
     > .nav-icon {
       float: left;
-      color: #fff;
+      color: @brand-secondary;
       margin: 1px 10px 0 0;
 
       > .material-icons {
@@ -38,7 +38,7 @@ body {
         padding: 2px;
       }
       :hover {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.1);
         border-radius: 50%;
       }
     }
@@ -60,6 +60,13 @@ body {
       color: #fff;
       width: @screen-md-max;
       max-width: 100%;
+
+      > .nav-icon {
+        color: #fff;
+        :hover {
+          background: rgba(255, 255, 255, 0.1);
+        }
+      }
     }
   }
 }
