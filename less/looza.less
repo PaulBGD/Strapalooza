@@ -1,0 +1,70 @@
+body {
+  padding-bottom: 20px;
+}
+
+.fixed, .container {
+  width: @screen-md-max;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.fixed {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 0;
+
+  .padded {
+    padding: 0 20px 10px;
+  }
+}
+
+.jumbotron-header {
+  > .fixed {
+    margin-top: @navbar-height;
+  }
+
+  @media (min-width: @screen-md-max) {
+    border-top: 400px solid lighten(@brand-secondary, 13.5%);
+    > .fixed {
+      margin-top: -350px;
+    }
+  }
+}
+
+.navbar-header {
+  > .navbar-icon {
+    float: left;
+    color: #fff;
+    margin: 16px 10px 0 0;
+
+    @media (min-width: @screen-md-max) {
+      margin-left: -15px;
+    }
+
+    > .material-icons {
+      font-size: 30px;
+      padding: 2px;
+    }
+    :hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+  }
+
+  > .navbar-brand {
+    cursor: default;
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+/*
+ * NO ARROWS
+ */
+.tooltip-arrow, .popover > .arrow {
+  display: none;
+}
