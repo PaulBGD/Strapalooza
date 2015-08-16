@@ -6713,8 +6713,8 @@ body {
     border-top: 400px solid #444444;
   }
   .jumbotron-header > .fixed {
-    padding-top: 64px;
-    margin-top: -350px;
+    padding-top: 1px;
+    margin-top: -286px;
     min-height: 500px;
   }
 }
