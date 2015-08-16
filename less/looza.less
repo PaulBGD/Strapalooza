@@ -20,40 +20,51 @@ body {
 }
 
 .jumbotron-header {
-  > .fixed {
+  > .fixed.no-header {
     margin-top: @navbar-height;
+  }
+
+  > h1 {
+    font-size: @font-size-h3;
+    margin-top: @navbar-height + 10;
+
+    > .nav-icon {
+      float: left;
+      color: #fff;
+      margin: 1px 10px 0 0;
+
+      > .material-icons {
+        font-size: @font-size-h3;
+        padding: 2px;
+      }
+      :hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+      }
+    }
   }
 
   @media (min-width: @screen-md-max) {
     border-top: 400px solid lighten(@brand-secondary, 13.5%);
     > .fixed {
       padding-top: 1px;
-      margin-top: -350px + @navbar-height;
       min-height: 500px;
+
+      &.no-header {
+        margin-top: -350px + @navbar-height;
+      }
+    }
+
+    > h1 {
+      margin: -350px + @font-size-h3 auto 16px;
+      color: #fff;
+      width: @screen-md-max;
+      max-width: 100%;
     }
   }
 }
 
 .navbar-header {
-  > .navbar-icon {
-    float: left;
-    color: #fff;
-    margin: 16px 10px 0 0;
-
-    @media (min-width: @screen-md-max) {
-      margin-left: -15px;
-    }
-
-    > .material-icons {
-      font-size: 30px;
-      padding: 2px;
-    }
-    :hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-    }
-  }
-
   > .navbar-brand {
     cursor: default;
   }

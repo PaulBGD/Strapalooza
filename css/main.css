@@ -6705,8 +6705,25 @@ body {
 .fixed .padded {
   padding: 0 20px 10px;
 }
-.jumbotron-header > .fixed {
+.jumbotron-header > .fixed.no-header {
   margin-top: 64px;
+}
+.jumbotron-header > h1 {
+  font-size: 34px;
+  margin-top: 74px;
+}
+.jumbotron-header > h1 > .nav-icon {
+  float: left;
+  color: #fff;
+  margin: 1px 10px 0 0;
+}
+.jumbotron-header > h1 > .nav-icon > .material-icons {
+  font-size: 34px;
+  padding: 2px;
+}
+.jumbotron-header > h1 > .nav-icon :hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
 @media (min-width: 1199px) {
   .jumbotron-header {
@@ -6714,27 +6731,17 @@ body {
   }
   .jumbotron-header > .fixed {
     padding-top: 1px;
-    margin-top: -286px;
     min-height: 500px;
   }
-}
-.navbar-header > .navbar-icon {
-  float: left;
-  color: #fff;
-  margin: 16px 10px 0 0;
-}
-@media (min-width: 1199px) {
-  .navbar-header > .navbar-icon {
-    margin-left: -15px;
+  .jumbotron-header > .fixed.no-header {
+    margin-top: -286px;
   }
-}
-.navbar-header > .navbar-icon > .material-icons {
-  font-size: 30px;
-  padding: 2px;
-}
-.navbar-header > .navbar-icon :hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
+  .jumbotron-header > h1 {
+    margin: -316px auto 16px;
+    color: #fff;
+    width: 1199px;
+    max-width: 100%;
+  }
 }
 .navbar-header > .navbar-brand {
   cursor: default;
