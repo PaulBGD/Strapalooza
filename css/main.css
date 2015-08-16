@@ -3715,11 +3715,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: transparent;
 }
 .navbar-default .navbar-brand {
-  color: #b3b3b3;
+  color: #ffffff;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #b3b3b3;
+  color: #ffffff;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
