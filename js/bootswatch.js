@@ -26,9 +26,9 @@
 
     $(".bs-component").hover(function () {
         $(this).append($button);
-        $button.show();
+        $button.css('visibility', 'visible');
     }, function () {
-        $button.hide();
+        $button.css('visibility', 'hidden');
     });
 
     function cleanSource(html) {
