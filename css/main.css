@@ -6714,7 +6714,9 @@ body {
   margin: 74px auto 0;
 }
 .jumbotron-header > .header > .header-nav {
+  margin-top: 74px;
   font-size: 34px;
+  color: #444444;
 }
 .jumbotron-header > .header > .header-nav .nav-icon {
   float: left;
@@ -6751,11 +6753,13 @@ body {
     margin: -316px auto 16px;
     width: 1199px;
     max-width: 100%;
+    color: #fff;
   }
   .jumbotron-header > .header > img {
     margin: 30px auto;
   }
   .jumbotron-header > .header > .header-nav {
+    margin-top: 0;
     color: #fff;
   }
   .jumbotron-header > .header > .header-nav .nav-icon {

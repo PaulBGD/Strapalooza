@@ -32,7 +32,9 @@ body {
     }
 
     > .header-nav {
+      margin-top: @navbar-height + 10;
       font-size: @font-size-h3;
+      color: @headings-color;
       .nav-icon {
         float: left;
         color: @brand-secondary;
@@ -74,12 +76,14 @@ body {
       margin: -350px + @font-size-h3 auto 16px;
       width: @screen-md-max;
       max-width: 100%;
+      color: #fff;
 
       > img {
         margin: 30px auto;
       }
 
       > .header-nav {
+        margin-top: 0;
         color: #fff;
 
         .nav-icon {
