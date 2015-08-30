@@ -50,7 +50,7 @@ body {
         }
       }
     }
-    
+
     > .nav.nav-tabs {
       text-align: center;
 
@@ -98,6 +98,25 @@ body {
         text-align: left;
       }
     }
+  }
+}
+
+.btn-group, .btn-group-vertical {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);
+
+  & > .btn, & > .btn-group {
+    &, &:focus, &:focus, &:active {
+      .box-shadow(none);
+    }
+  }
+
+  border-radius: @border-radius-base;
+
+  &.btn-group-lg {
+    border-radius: @border-radius-large;
+  }
+  &.btn-group-sm {
+    border-radius: @border-radius-small;
   }
 }
 

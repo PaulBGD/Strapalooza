@@ -6184,6 +6184,9 @@ button.close {
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
+.btn-default:hover {
+  background-color: #eeeeee;
+}
 .btn-default.disabled {
   background-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.4);
@@ -6848,6 +6851,38 @@ body {
   .jumbotron-header > .header > .nav.nav-tabs {
     text-align: left;
   }
+}
+.btn-group,
+.btn-group-vertical {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);
+  border-radius: 3px;
+}
+.btn-group > .btn,
+.btn-group-vertical > .btn,
+.btn-group > .btn-group,
+.btn-group-vertical > .btn-group,
+.btn-group > .btn:focus,
+.btn-group-vertical > .btn:focus,
+.btn-group > .btn-group:focus,
+.btn-group-vertical > .btn-group:focus,
+.btn-group > .btn:focus,
+.btn-group-vertical > .btn:focus,
+.btn-group > .btn-group:focus,
+.btn-group-vertical > .btn-group:focus,
+.btn-group > .btn:active,
+.btn-group-vertical > .btn:active,
+.btn-group > .btn-group:active,
+.btn-group-vertical > .btn-group:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-group.btn-group-lg,
+.btn-group-vertical.btn-group-lg {
+  border-radius: 3px;
+}
+.btn-group.btn-group-sm,
+.btn-group-vertical.btn-group-sm {
+  border-radius: 3px;
 }
 @media (min-width: 1199px) {
   .navbar-right {
