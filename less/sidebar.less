@@ -4,45 +4,20 @@
   bottom: 0;
   left: -260px; /* 260px is the width + shadow */
   width: 250px;
+  padding-top: @navbar-height + 25px;
   overflow-y: auto;
 
   background-color: @brand-primary;
-  z-index: @zindex-modal;
-  box-shadow: 0 10px 10px rgba(0,0,0,0.42);
+  z-index: @zindex-sidebar;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.22);
 
   .transition(left 0.2s cubic-bezier(0.4, 0, 0.2, 1));
-
-  & > .nav-brand {
-    padding: @navbar-padding-vertical @navbar-padding-horizontal;
-    font-size: 24px;
-    line-height: @line-height-computed;
-    height: @navbar-height;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
-
-    @media (min-width: @grid-float-breakpoint) {
-      .navbar > .container &,
-      .navbar > .container-fluid & {
-        margin-left: -@navbar-padding-horizontal;
-      }
-    }
-
-    color: @navbar-default-brand-color;
-    &:hover,
-    &:focus {
-      color: @navbar-default-brand-hover-color;
-      background-color: @navbar-default-brand-hover-bg;
-    }
-  }
 
   & > .tab:first-child > a {
     margin-top: 25px;
   }
 
-  & > .tab > a {
+  & > li > a {
     border-radius: 5px;
     margin: 1px 10px;
     color: #fff;
@@ -58,7 +33,7 @@
     }
   }
 
-  & > .tab.active > a {
+  & > li.active > a {
     background-color: rgba(0, 0, 0, 0.2);
   }
 
@@ -67,20 +42,52 @@
   }
 }
 
-.nav.nav-sidebar > .nav-brand > a[data-toggle=sidebar], .navbar > .navbar-header > .navbar-brand > a[data-toggle=sidebar] {
+.navbar > .navbar-header > .navbar-brand > a[data-toggle=sidebar] {
   display: inline-block;
   float: left;
   color: #fff;
   margin-right: 15px;
   margin-left: 10px;
-  margin-top: -5px;
+  margin-top: -8px;
   border-radius: 50%;
   padding: 5px;
-  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
 
-  & > .material-icons {
-    font-size: 24px;
-    vertical-align: middle;
+  &.bars {
+    & > span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      margin: 4px 4px;
+      .transition(margin 0.1s cubic-bezier(0.4, 0, 0.2, 1));
+
+      &:first-child {
+        margin-top: 8px;
+      }
+
+      &:last-child {
+        margin-bottom: 8px;
+      }
+    }
+
+    &.in > span {
+      margin: 6px 4px;
+
+      &:first-child {
+        margin-top: 6px;
+      }
+
+      &:last-child {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  &.bars.in {
+
   }
 
   &:hover, &:focus, &:active {
