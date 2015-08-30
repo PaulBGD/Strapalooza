@@ -1,6 +1,5 @@
 (function ($) {
     $('[data-toggle="sidebar"]').click(function (e) {
-        console.log('clicked');
         var target = $(this).toggleClass('in').attr('data-target');
         var match = $(target);
         if (match.length > 0) {
