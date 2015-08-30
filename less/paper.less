@@ -35,23 +35,28 @@
 
 #btn(@class,@bg) {
   .btn-@{class} {
-    background-size: 200%;
-    background-position: 50%;
-
-    &:focus {
-      background-color: @bg;
-    }
 
     &:hover,
-    &:active:hover {
-      background-color: darken(@bg, 6%);
+    &:active,
+    &:focus {
+      background: lighten(@bg, 6%);
     }
 
-    &:active {
-      background-color: darken(@bg, 12%);
-      #gradient > .radial(darken(@bg, 12%) 10%, @bg 11%);
-      background-size: 1000%;
-      .box-shadow(2px 2px 4px rgba(0,0,0,.4));
+    &.btn-ripple {
+      overflow: hidden;
+      border: 0;
+      position: relative;
+
+      & > .ripple-effect {
+        position: absolute;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        background: white;
+        .animation(ripple-animation 0.7s);
+        transform: scale(100);
+        .opacity(0);
+      }
     }
   }
 }
@@ -67,8 +72,18 @@
 .btn {
   text-transform: uppercase;
   border: none;
-  .box-shadow(1px 1px 4px rgba(0,0,0,.4));
-  .transition(all 0.1s);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.36);
+  .transition(all 0.2s cubic-bezier(0.4, 0, 0.2, 1));
+
+  &:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  &:focus {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.6);
+    transition-delay: 0s;
+    outline: 0;
+  }
 
   &-link {
     border-radius: @btn-border-radius-base;
@@ -78,8 +93,15 @@
     &:hover,
     &:focus {
       .box-shadow(none);
+      background: transparent;
       color: @btn-default-color;
       text-decoration: none;
+    }
+
+    &.btn-ripple > .ripple-effect {
+      .animation(ripple-animation-stay 0.7s);
+      transform: scale(100);
+      .opacity(0.2);
     }
   }
 
@@ -90,6 +112,28 @@
       color: rgba(0, 0, 0, 0.4);
       opacity: 1;
     }
+  }
+}
+
+@keyframes ripple-animation {
+  from {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(100);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-animation-stay {
+  from {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(100);
+    opacity: 0.2;
   }
 }
 
