@@ -19,26 +19,32 @@
 
     var $div;
 
-    $('.btn-ripple').on('mousedown', function (event) {
-        if ($div) {
-            $div.remove();
+    $(document).on('mousedown', function (event) {
+        var target = $(event.target);
+        if (target.parent().hasClass('btn-ripple')) {
+            target = target.parent();
         }
+        if (target.hasClass('btn-ripple')) {
+            if ($div) {
+                $div.remove();
+            }
 
-        $div = $('<div/>');
-        var btnOffset = $(this).offset();
-        var xPos = event.pageX - btnOffset.left;
-        var yPos = event.pageY - btnOffset.top;
+            $div = $('<div/>');
+            var btnOffset = target.offset();
+            var xPos = event.pageX - btnOffset.left;
+            var yPos = event.pageY - btnOffset.top;
 
-        $div.addClass('ripple-effect');
-        var $ripple = $(".ripple-effect");
+            $div.addClass('ripple-effect');
+            var $ripple = $(".ripple-effect");
 
-        $ripple.css("height", 4);
-        $ripple.css("width", 4);
-        $div.css({
-            top: yPos - 2.5,
-            left: xPos - 2.5,
-            background: $(this).hasClass('btn-link') ? '#222222' : '#ffffff'
-        }).appendTo($(this));
+            $ripple.css("height", 4);
+            $ripple.css("width", 4);
+            $div.css({
+                top: yPos - 2.5,
+                left: xPos - 2.5,
+                background: target.hasClass('btn-link') ? '#222222' : '#ffffff'
+            }).appendTo(target);
+        }
     });
 
     $(document).on('mouseup', function () {
